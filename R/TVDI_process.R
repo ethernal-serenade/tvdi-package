@@ -32,27 +32,7 @@ TVDI_process <- function (path_NDVI, path_LST, path) {
 
   GROUP <- cbind(data_NDVI,data_LST)
   colnames(GROUP) <- c("NDVI","LST")
-  range_md <- read.table(header = T, text = "Start End Type
-                                              0 0.05 1
-                                              0.05 0.1 2
-                                              0.1 0.15 3
-                                              0.15 0.2 4
-                                              0.2 0.25 5
-                                              0.25 0.3 6
-                                              0.3 0.35 7
-                                              0.35 0.4 8
-                                              0.4 0.45 9
-                                              0.45 0.5 10
-                                              0.5 0.55 11
-                                              0.55 0.6 12
-                                              0.6 0.65 13
-                                              0.65 0.7 14
-                                              0.7 0.75 15
-                                              0.75 0.8 16
-                                              0.8 0.85 17
-                                              0.85 0.9 18
-                                              0.9 0.95 19
-                                              0.95 1 20")
+  range_md <- read.table(header = T, file = "../TVDIpk/Text/Range_MD.txt", sep = ",")
   group_range <- data.frame(GROUP$NDVI, "Type" = cut(GROUP$NDVI, breaks = range_md$Start,
                                                      right = F, include.lowest = T))
   GROUP <- cbind(group_range, data_LST)
