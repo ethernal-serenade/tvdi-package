@@ -12,6 +12,7 @@ TVDI_process <- function (path_NDVI, path_LST, path) {
   list_NDVI <- list.files(path_NDVI)
   setwd(path_LST)
   list_LST <- list.files(path_LST)
+
   if(length(list_NDVI) != length(list_LST)) {
     stop("You need to change the length of the 2 lists to be equal",
          call. = FALSE)
@@ -32,7 +33,8 @@ TVDI_process <- function (path_NDVI, path_LST, path) {
 
   GROUP <- cbind(data_NDVI,data_LST)
   colnames(GROUP) <- c("NDVI","LST")
-  range_md <- read.table(header = T, file = "../TVDIpk/Text/Range_MD.txt", sep = ",")
+  range_md <- read.table(header = T, file = system.file("extdata",
+                                                        "Range_MD.txt", package = "TVDIpk"), sep = ",")
   group_range <- data.frame(GROUP$NDVI, "Type" = cut(GROUP$NDVI, breaks = range_md$Start,
                                                      right = F, include.lowest = T))
   GROUP <- cbind(group_range, data_LST)

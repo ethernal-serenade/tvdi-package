@@ -28,7 +28,7 @@ Golay_Raster <- function(path, path_result) {
   x_matrix[is.na(x_matrix)] <- 0
   k_matrix[is.nan(k_matrix)] <- 0
   z_matrix <- matrix(0, nrow = nrow(x), ncol = length(x))
-  sourceCpp("../TVDIpk/Cpp_Text/Find_Count_NA_data.cpp")
+  sourceCpp(system.file("extdata", "Find_Count_NA_data.cpp", package = "TVDIpk"))
   z_tb <- as.data.frame(NA_data(x_matrix, z_matrix, k_matrix))
   z_tb[z_tb == 0] <- NA
   z_result <- as.data.frame(savitzkyGolay(z_tb, p = 3, w = 11, m = 0))
