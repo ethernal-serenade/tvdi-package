@@ -13,7 +13,7 @@ TVDI_process <- function (path_NDVI, path_LST, path) {
   setwd(path_LST)
   list_LST <- list.files(path_LST)
 
-  if(length(list_NDVI) != length(list_LST)) {
+  if (length(list_NDVI) != length(list_LST)) {
     stop("You need to change the length of the 2 lists to be equal",
          call. = FALSE)
   }
