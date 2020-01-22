@@ -70,7 +70,7 @@ TVDI_process <- function (path_NDVI, path_LST, path) {
                     Q0.8_0.85[which.max(Q0.8_0.85$LST),],
                     Q0.85_0.9[which.max(Q0.85_0.9$LST),])
 
-  linearMod <- lm(formula <- tableMax$LST ~ tableMax$NDVI)
+  linearMod <- lm(formula = tableMax$LST ~ tableMax$NDVI)
   Stats <- summary(linearMod)
   Coef <- Stats[4]$coefficients
   Coef_tbl <- as.data.frame(Coef)
