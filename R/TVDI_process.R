@@ -82,8 +82,8 @@ TVDI_process <- function (path_NDVI, path_LST, path) {
   b <- linear_index[2,1]
   Tmin_tb <- GROUP[which.min(GROUP$LST),]
   Tmin <- Tmin_tb$LST
-  dir.create(paste(path, "TVDI",sep = "/"))
-  path_result = paste(path, "TVDI",sep = "/")
+  dir.create(paste(path, "TVDI", sep = "/"))
+  path_result = paste(path, "TVDI", sep = "/")
   latlong <- as.data.frame(coordinates(raster(list_LST[1])))
 
   for (i in 1:length(list_NDVI)) {
