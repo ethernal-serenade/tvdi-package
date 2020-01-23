@@ -7,11 +7,11 @@
 Mean_Raster(path)
 }
 \arguments{
-\item{path}{đường dẫn chứa ảnh}
+\item{path}{The path contains the Raster}
 }
 \value{
-kết quả ảnh
+Result Images
 }
 \description{
-Tính ảnh chỉ số TVDI
+Calculate Raster of TVDI index
 }

@@ -1,11 +1,11 @@
 #' Gapfill Raster using Savitzky-Golay filtering
 #'
-#' Sử dụng thuật toán lọc thời gian Savitzky-Golay để lắp đầy
-#' ảnh vệ tinh bị mất các phần tử ảnh.
+#' Use Savitzky-Golay time filtering algorithm to fill
+#' satellite images lost image elements.
 #'
-#' @param path đường dẫn chứa ảnh (điều kiện trên 30 thời điểm ảnh)
-#' @param path_resule đường dẫn chứa kết quả ảnh
-#' @return kết quả ảnh
+#' @param path The path contains the images (conditions over 30 Images)
+#' @param path_resule The path contains the result images
+#' @return Result image
 #' @export
 Golay_Raster <- function(path, path_result) {
   setwd(path)

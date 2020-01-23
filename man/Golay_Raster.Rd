@@ -7,14 +7,14 @@
 Golay_Raster(path, path_result)
 }
 \arguments{
-\item{path}{đường dẫn chứa ảnh (điều kiện trên 30 thời điểm ảnh)}
+\item{path}{The path contains the images (conditions over 30 Images)}
 
-\item{path_resule}{đường dẫn chứa kết quả ảnh}
+\item{path_resule}{The path contains the result images}
 }
 \value{
-kết quả ảnh
+Result image
 }
 \description{
-Sử dụng thuật toán lọc thời gian Savitzky-Golay để lắp đầy
-ảnh vệ tinh bị mất các phần tử ảnh.
+Use Savitzky-Golay time filtering algorithm to fill
+satellite images lost image elements.
 }

@@ -7,14 +7,14 @@
 TVDI_process(path_NDVI, path_LST, path)
 }
 \arguments{
-\item{list_NDVI}{Danh sách các ảnh NDVI}
+\item{list_NDVI}{List of NDVI images}
 
-\item{list_LST}{Danh sách các ảnh LST}
+\item{list_LST}{List of LST images}
 }
 \value{
-kết quả ảnh TVDI
+Results TVDI
 }
 \description{
-Lập hàm xác định TVDI thông qua 2 chỉ số LST và NDVI trên toàn bộ các thời điểm ảnh.
-Sau đó xuất kết quả dưới dạng Raster TVDI.
+Set the function of determining TVDI through LST and NDVI on all image points.
+Then export the result as Raster TVDI.
 }

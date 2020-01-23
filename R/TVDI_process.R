@@ -1,11 +1,11 @@
 #' Calculate TVDI and Export TVDI Images
 #'
-#' Lập hàm xác định TVDI thông qua 2 chỉ số LST và NDVI trên toàn bộ các thời điểm ảnh.
-#' Sau đó xuất kết quả dưới dạng Raster TVDI.
+#' Set the function of determining TVDI through LST and NDVI on all image points.
+#' Then export the result as Raster TVDI.
 #'
-#' @param list_NDVI Danh sách các ảnh NDVI
-#' @param list_LST Danh sách các ảnh LST
-#' @return kết quả ảnh TVDI
+#' @param list_NDVI List of NDVI images
+#' @param list_LST List of LST images
+#' @return Results TVDI
 #' @export
 TVDI_process <- function (path_NDVI, path_LST, path) {
   setwd(path_NDVI)

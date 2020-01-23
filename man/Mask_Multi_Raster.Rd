@@ -7,15 +7,15 @@
 Mask_Multi_Raster(path, path_result, vector_shp)
 }
 \arguments{
-\item{path}{đường dẫn chứa ảnh}
+\item{path}{The path contains the images}
 
-\item{path_result}{đường dẫn chứa kết quả ảnh}
+\item{path_result}{The path contains the result images}
 
-\item{vector_shp}{dữ liệu vector (ESRI Shapefiles)}
+\item{vector_shp}{vector data (ESRI Shapefiles)}
 }
 \value{
-kết quả ảnh
+Result images
 }
 \description{
-Tạo mask và cắt nhiều ảnh Raster
+Create a mask and crop multiple raster images
 }

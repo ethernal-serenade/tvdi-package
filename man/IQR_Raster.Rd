@@ -7,11 +7,11 @@
 IQR_Raster(x, type_img)
 }
 \arguments{
-\item{x}{file ảnh cần lọc giá trị ngoại lệ}
+\item{x}{Image file to filter out exception value}
 }
 \value{
-kết quả ảnh
+Result image
 }
 \description{
-Lọc giá trị ngoại lệ dựa trên công thức IQR (InterQuartile Range)
+Filter outliers based on formula IQR (InterQuartile Range)
 }
