@@ -5,7 +5,7 @@ Authors@R: as.person(c(
     "Nguyen Duc Lam <nguyenduclam0605@gmai.com> [aut, cre]",
     "Tran Thai Hai Dang <dangtran0608@gmail.com> [ctb]"
   ))
-Description: Sử dụng dữ liệu ảnh viễn thám MODIS để tính chỉ số TVDI
+Description: Use MODIS remote sensing image data to calculate TVDI index
 License: GPL (>=3)
 Encoding: UTF-8
 LazyData: true
@@ -18,5 +18,5 @@ Depends:
     stringr (>= 1.4.0),
     stringi (>= 1.4.4),
     tibble (>= 2.1.3)
-SystemRequirements: GDAL (>= 2.0.1), PROJ (>= 4.8.0)
+SystemRequirements: GDAL (>= 2.0.1), PROJ.4 (>= 4.8.0)
 RoxygenNote: 7.0.2
