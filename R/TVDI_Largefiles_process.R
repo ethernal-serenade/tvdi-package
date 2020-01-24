@@ -11,7 +11,6 @@
 #' @param list_LST List of LST images
 #' @return Results TVDI
 #' @export
-
 TVDI_Largefiles_process <- function (path_NDVI, path_LST, path) {
   setwd(path_NDVI)
   list_NDVI <- list.files(path_NDVI)
