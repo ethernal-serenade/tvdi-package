@@ -84,7 +84,6 @@ TVDI_process <- function (path_NDVI, path_LST, path) {
   Tmin <- Tmin_tb$LST
   dir.create(paste(path, "TVDI", sep = "/"))
   path_result = paste(path, "TVDI", sep = "/")
-  latlong <- as.data.frame(coordinates(raster(list_LST[1])))
 
   for (i in 1:length(list_NDVI)) {
     setwd(path_NDVI)
@@ -94,9 +93,10 @@ TVDI_process <- function (path_NDVI, path_LST, path) {
 
     tb <- cbind(x,y)
     TVDI <- (y - Tmin)/(a + b*x - Tmin)
+    latlong <- as.data.frame(coordinates(raster(list_LST[i])))
     raster_TVDI <- cbind(TVDI, latlong)
     coordinates(raster_TVDI) <- ~x+y
-    proj4string(raster_TVDI) <- crs(proj4string(raster(list_LST[1])))
+    proj4string(raster_TVDI) <- crs(proj4string(raster(list_LST[i])))
     gridded(raster_TVDI) <- TRUE
     TVDI <- raster(raster_TVDI)
     writeRaster(TVDI, paste(path_result, "/", "TVDI",
