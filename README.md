@@ -14,3 +14,7 @@
     - Note: vấn đề ở phần DESCRIPTION (các package sử dụng Imports thì các package có trong máy sẽ vào sẵn, trong khi hiện tại phải sử dụng Depends mới vào được)
     - Một vấn đề quan trọng là khi sử dụng các package có liên quan đến GDAL cần thêm phần SystemRequirements để R hiểu mà thêm vào
 ###### References
+- http://r-pkgs.had.co.nz/
+- Package MODIStsp: https://github.com/ropensci/MODIStsp
+- https://rstudio.github.io/leaflet/
+- https://github.com/rstudio/shiny-examples/tree/master/063-superzip-example
