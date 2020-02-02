@@ -9,7 +9,7 @@ Golay_Raster(path, path_result)
 \arguments{
 \item{path}{The path contains the images (conditions over 30 Images)}
 
-\item{path_resule}{The path contains the result images}
+\item{path_result}{The path contains the result images}
 }
 \value{
 Result image

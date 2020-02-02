@@ -4,7 +4,7 @@
 #' satellite images lost image elements.
 #'
 #' @param path The path contains the images (conditions over 30 Images)
-#' @param path_resule The path contains the result images
+#' @param path_result The path contains the result images
 #' @return Result image
 #' @export
 Golay_Raster <- function(path, path_result) {
