@@ -1,4 +1,6 @@
 # TVDI Package R
+
+### Description
 - Sử dụng ảnh MODIS tính chỉ số TVDI
 - Thực hiện được nhiều ảnh Raster cùng lúc
 - Có thể sử dụng để tính toán các file ảnh lớn
