@@ -2,9 +2,10 @@
 - Sử dụng ảnh MODIS tính chỉ số TVDI
 - Thực hiện được nhiều ảnh Raster cùng lúc
 - Có thể sử dụng để tính toán các file ảnh lớn
-- Giao diện UI tính toán TVDI
+- Giao diện UI tính toán xuất ảnh TVDI, xuất ảnh lọc Golay Savitzky
 - Các function trong TVDI package
     - Golay_Raster
+    - Golay_GUI
     - Mean_Raster
     - Mask_Multi_Raster
     - IQR_Raster
