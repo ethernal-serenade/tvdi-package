@@ -1,11 +1,11 @@
 # TVDI Package R
 
 ### Description
-- Sử dụng ảnh MODIS tính chỉ số TVDI
-- Thực hiện được nhiều ảnh Raster cùng lúc
-- Có thể sử dụng để tính toán các file ảnh lớn
-- Giao diện UI tính toán xuất ảnh TVDI, xuất ảnh lọc Golay Savitzky
-- Các function trong TVDI package
+- Use MODIS image to calculate TVDI index
+- Make multiple Raster images at the same time
+- Can be used to calculate large image files
+- UI interface calculates TVDI image export, exports Golay Savitzky filter images
+- The functions in the TVDI package
     - Golay_Raster
     - Golay_GUI
     - Mean_Raster
@@ -14,10 +14,10 @@
     - TVDI_process
     - TVDI_Largefiles_process
     - TVDI_GUI
-- Các lưu ý:
-    - Sau khi code trên các thư viện, cần chèn các thư viện vào phần DESCRIPTION
-    - Note: vấn đề ở phần DESCRIPTION (các package sử dụng Imports thì các package có trong máy sẽ vào sẵn, trong khi hiện tại phải sử dụng Depends mới vào được)
-    - Một vấn đề quan trọng là khi sử dụng các package có liên quan đến GDAL cần thêm phần SystemRequirements để R hiểu mà thêm vào
+- Notes:
+    - After coding on the libraries, need to insert the libraries into DESCRIPTION
+    - Note: the problem in DESCRIPTION (packages using Imports, the packages available in the machine will be available, while currently using Depends can be used)
+    - An important issue is that when using GDAL-related packages, it is necessary to add the SystemRequirements section so that R can understand it.
 
 ### How to Download and Install
 ``` r
