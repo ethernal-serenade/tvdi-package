@@ -2,6 +2,7 @@
 - Sử dụng ảnh MODIS tính chỉ số TVDI
 - Thực hiện được nhiều ảnh Raster cùng lúc
 - Có thể sử dụng để tính toán các file ảnh lớn
+- Giao diện UI tính toán TVDI
 - Các function trong TVDI package
     - Golay_Raster
     - Mean_Raster
@@ -9,6 +10,7 @@
     - IQR_Raster
     - TVDI_process
     - TVDI_Largefiles_process
+    - TVDI_GUI
 - Các lưu ý:
     - Sau khi code trên các thư viện, cần chèn các thư viện vào phần DESCRIPTION
     - Note: vấn đề ở phần DESCRIPTION (các package sử dụng Imports thì các package có trong máy sẽ vào sẵn, trong khi hiện tại phải sử dụng Depends mới vào được)
