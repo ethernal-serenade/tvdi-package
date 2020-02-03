@@ -27,11 +27,11 @@ library(TVDIpk)
 
 ### How to use Pakages
 1. Golay UI
-    `Golay_GUI()`
-    <img src="Golay_GUI.jpg" width="50%">
+    + `Golay_GUI()`
+    + <img src="Golay_GUI.jpg" width="50%">
 2. TVDI UI
-    `TVDI_GUI()`
-    <img src="TVDI_GUI.jpg" width="50%">
+    + `TVDI_GUI()`
+    + <img src="TVDI_GUI.jpg" width="50%">
 
 ###### References
 - http://r-pkgs.had.co.nz/
