@@ -35,7 +35,7 @@ library(TVDIpk)
     + `TVDI_GUI()`
     + <img src="TVDI_GUI.jpg" width="50%">
 
-###### References
+### References
 - http://r-pkgs.had.co.nz/
 - Package MODIStsp: https://github.com/ropensci/MODIStsp
 - https://rstudio.github.io/leaflet/
