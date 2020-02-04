@@ -30,7 +30,7 @@ library(TVDIpk)
 ```
 2. Install from Cran
 ``` r
-install.packages("TVDIok")
+install.packages("TVDIpk")
 ```
 
 ### How to use Pakages
