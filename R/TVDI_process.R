@@ -1,18 +1,19 @@
 #' Calculate TVDI and Export TVDI Images
 #'
-#' Lập hàm xác định TVDI thông qua 2 chỉ số LST và NDVI trên toàn bộ các thời điểm ảnh.
-#' Sau đó xuất kết quả dưới dạng Raster TVDI.
+#' Set the function of determining TVDI through LST and NDVI on all image points.
+#' Then export the result as Raster TVDI.
 #'
-#' @param list_NDVI Danh sách các ảnh NDVI
-#' @param list_LST Danh sách các ảnh LST
-#' @return kết quả ảnh TVDI
+#' @param list_NDVI List of NDVI images
+#' @param list_LST List of LST images
+#' @return Results TVDI
 #' @export
 TVDI_process <- function (path_NDVI, path_LST, path) {
   setwd(path_NDVI)
   list_NDVI <- list.files(path_NDVI)
   setwd(path_LST)
   list_LST <- list.files(path_LST)
-  if(length(list_NDVI) != length(list_LST)) {
+
+  if (length(list_NDVI) != length(list_LST)) {
     stop("You need to change the length of the 2 lists to be equal",
          call. = FALSE)
   }
@@ -32,27 +33,8 @@ TVDI_process <- function (path_NDVI, path_LST, path) {
 
   GROUP <- cbind(data_NDVI,data_LST)
   colnames(GROUP) <- c("NDVI","LST")
-  range_md <- read.table(header = T, text = "Start End Type
-                                              0 0.05 1
-                                              0.05 0.1 2
-                                              0.1 0.15 3
-                                              0.15 0.2 4
-                                              0.2 0.25 5
-                                              0.25 0.3 6
-                                              0.3 0.35 7
-                                              0.35 0.4 8
-                                              0.4 0.45 9
-                                              0.45 0.5 10
-                                              0.5 0.55 11
-                                              0.55 0.6 12
-                                              0.6 0.65 13
-                                              0.65 0.7 14
-                                              0.7 0.75 15
-                                              0.75 0.8 16
-                                              0.8 0.85 17
-                                              0.85 0.9 18
-                                              0.9 0.95 19
-                                              0.95 1 20")
+  range_md <- read.table(header = T, file = system.file("extdata",
+                                                        "Range_MD.txt", package = "TVDIpk"), sep = ",")
   group_range <- data.frame(GROUP$NDVI, "Type" = cut(GROUP$NDVI, breaks = range_md$Start,
                                                      right = F, include.lowest = T))
   GROUP <- cbind(group_range, data_LST)
@@ -88,7 +70,7 @@ TVDI_process <- function (path_NDVI, path_LST, path) {
                     Q0.8_0.85[which.max(Q0.8_0.85$LST),],
                     Q0.85_0.9[which.max(Q0.85_0.9$LST),])
 
-  linearMod <- lm(formula <- tableMax$LST ~ tableMax$NDVI)
+  linearMod <- lm(formula = tableMax$LST ~ tableMax$NDVI)
   Stats <- summary(linearMod)
   Coef <- Stats[4]$coefficients
   Coef_tbl <- as.data.frame(Coef)
@@ -100,9 +82,8 @@ TVDI_process <- function (path_NDVI, path_LST, path) {
   b <- linear_index[2,1]
   Tmin_tb <- GROUP[which.min(GROUP$LST),]
   Tmin <- Tmin_tb$LST
-  dir.create(paste(path, "TVDI",sep = "/"))
-  path_result = paste(path, "TVDI",sep = "/")
-  latlong <- as.data.frame(coordinates(raster(list_LST[1])))
+  dir.create(paste(path, "TVDI", sep = "/"))
+  path_result = paste(path, "TVDI", sep = "/")
 
   for (i in 1:length(list_NDVI)) {
     setwd(path_NDVI)
@@ -112,9 +93,10 @@ TVDI_process <- function (path_NDVI, path_LST, path) {
 
     tb <- cbind(x,y)
     TVDI <- (y - Tmin)/(a + b*x - Tmin)
+    latlong <- as.data.frame(coordinates(raster(list_LST[i])))
     raster_TVDI <- cbind(TVDI, latlong)
     coordinates(raster_TVDI) <- ~x+y
-    proj4string(raster_TVDI) <- crs(proj4string(raster(list_LST[1])))
+    proj4string(raster_TVDI) <- crs(proj4string(raster(list_LST[i])))
     gridded(raster_TVDI) <- TRUE
     TVDI <- raster(raster_TVDI)
     writeRaster(TVDI, paste(path_result, "/", "TVDI",

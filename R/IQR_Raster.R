@@ -1,9 +1,9 @@
 #' IQR Raster
 #'
-#' Lọc giá trị ngoại lệ dựa trên công thức IQR (InterQuartile Range)
+#' Filter outliers based on formula IQR (InterQuartile Range)
 #'
-#' @param x file ảnh cần lọc giá trị ngoại lệ
-#' @return kết quả ảnh
+#' @param x Image file to filter out exception value
+#' @return Result image
 #' @export
 IQR_Raster <- function(x, type_img){
   k1 <- readGDAL(x)@data

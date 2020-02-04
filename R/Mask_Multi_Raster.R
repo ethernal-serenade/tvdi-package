@@ -1,11 +1,11 @@
 #' Mask Multifile Raster
 #'
-#' Tạo mask và cắt nhiều ảnh Raster
+#' Create a mask and crop multiple raster images
 #'
-#' @param path đường dẫn chứa ảnh
-#' @param path_result đường dẫn chứa kết quả ảnh
-#' @param vector_shp dữ liệu vector (ESRI Shapefiles)
-#' @return kết quả ảnh
+#' @param path The path contains the images
+#' @param path_result The path contains the result images
+#' @param vector_shp vector data (ESRI Shapefiles)
+#' @return Result images
 #' @export
 Mask_Multi_Raster <- function(path, path_result, vector_shp){
   setwd(path)

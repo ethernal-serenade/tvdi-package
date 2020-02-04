@@ -1,9 +1,9 @@
 #' Calculate Mean Raster
 #'
-#' Tính ảnh chỉ số TVDI
+#' Calculate Raster of TVDI index
 #'
-#' @param path đường dẫn chứa ảnh
-#' @return kết quả ảnh
+#' @param path The path contains the Raster
+#' @return Result Images
 #' @export
 Mean_Raster <- function(path){
   setwd(path)
