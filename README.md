@@ -4,7 +4,8 @@
 - Use MODIS image to calculate TVDI index
 - Make multiple Raster images at the same time
 - Can be used to calculate large image files
-- UI interface calculates TVDI image export, exports Golay Savitzky filter images
+- UI interface calculates TVDI index
+- UI interface exports Golay Savitzky filter images
 - The functions in the TVDI package
     - Golay_Raster
     - Golay_GUI
