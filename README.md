@@ -21,11 +21,16 @@
     - An important issue is that when using GDAL-related packages, it is necessary to add the SystemRequirements section so that R can understand it.
 
 ### How to Download and Install
+1. Download and Install from Github
 ``` r
 install.packages("devtools")
 library(devtools)
 install_github("nguyenduclam/TVDIpk")
 library(TVDIpk)
+```
+2. Install from Cran
+``` r
+install.packages("TVDIok")
 ```
 
 ### How to use Pakages
