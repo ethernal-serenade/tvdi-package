@@ -1,6 +1,6 @@
 Package: TVDIpk
 Title: TVDI package
-Version: 0.2
+Version: 0.3
 Authors@R: as.person("Nguyen Duc Lam <nguyenduclam0605@gmai.com> [aut, cre]")
 Description: Use MODIS remote sensing image data to calculate TVDI index
 License: GPL (>=3)

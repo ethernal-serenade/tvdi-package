@@ -13,9 +13,9 @@
 #' @export
 TVDI_Largefiles_process <- function (path_NDVI, path_LST, path) {
   setwd(path_NDVI)
-  list_NDVI <- list.files(path_NDVI)
+  list_NDVI <- list.files(path_NDVI, pattern = ".*tif$")
   setwd(path_LST)
-  list_LST <- list.files(path_LST)
+  list_LST <- list.files(path_LST, pattern = ".*tif$")
 
   if (length(list_NDVI) != length(list_LST)) {
     stop("You need to change the length of the 2 lists to be equal",
