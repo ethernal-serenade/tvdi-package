@@ -1,10 +1,7 @@
 Package: TVDIpk
 Title: TVDI package
-Version: 0.1
-Authors@R: as.person(c(
-    "Nguyen Duc Lam <nguyenduclam0605@gmai.com> [aut, cre]",
-    "Tran Thai Hai Dang <dangtran0608@gmail.com> [ctb]"
-  ))
+Version: 0.2
+Authors@R: as.person("Nguyen Duc Lam <nguyenduclam0605@gmai.com> [aut, cre]")
 Description: Use MODIS remote sensing image data to calculate TVDI index
 License: GPL (>=3)
 Encoding: UTF-8
