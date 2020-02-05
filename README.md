@@ -22,16 +22,20 @@
 
 ### How to Download and Install
 + Download and Install from Github
+
 ``` r
 install.packages("devtools")
 library(devtools)
 install_github("nguyenduclam/TVDIpk")
 library(TVDIpk)
 ```
+
 + Install from Cran (waiting for update in Cran)
+
 ``` r
 install.packages("TVDIpk")
 ```
+
 + Note that **if the `GTK+` library is not already installed on your
 system, installation may fail**. In that case, please install and load
 the `gWidgetsRGtk2` library beforehand:
@@ -55,23 +59,18 @@ session from RStudio “Session” menu), reload RStudio and the try to
 reload `gWidgetsRGtk2`. If it loads correctly, you should be ready to
 go.
 
-If it still fails, try downloading the GTK+ bundle
-from:
-
-<http://ftp.gnome.org/pub/gnome/binaries/win64/gtk+/2.22/gtk+-bundle_2.22.1-20101229_win64.zip>
-(OR
-<http://ftp.gnome.org/pub/gnome/binaries/win32/gtk+/2.22/gtk+-bundle_2.22.1-20101227_win32.zip>
-if on Win32)
-
-, unzip the archive on a folder of your choice (e.g., `C:\\Program
++ If it still fails, try downloading the GTK+ bundle links, unzip the archive on a folder of your choice (e.g., `C:\\Program
 Files\\GTK+`), then add the path to its “bin” subfolder (e.g.,
 `C:\\Program Files\\GTK+\\bin\\` to your system PATH environment
 variable.
 
-Restart your system and try loading again `gWidgetsRGtk2`: if it loads
-ok, you should be ready to install
-`MODIStsp`
++ Restart your system and try loading again `gWidgetsRGtk2`: if it loads
+ok, you should be ready to install `TVDIpk`:
 
+    + <http://ftp.gnome.org/pub/gnome/binaries/win64/gtk+/2.22/gtk+-bundle_2.22.1-20101229_win64.zip>
+(OR
+    + <http://ftp.gnome.org/pub/gnome/binaries/win32/gtk+/2.22/gtk+-bundle_2.22.1-20101227_win32.zip>
+if on Win32)
 
 ### How to use Pakages
 1. Golay UI
