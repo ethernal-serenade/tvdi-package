@@ -28,7 +28,7 @@ library(devtools)
 install_github("nguyenduclam/TVDIpk")
 library(TVDIpk)
 ```
-2. Install from Cran
+2. Install from Cran (waiting for update in Cran)
 ``` r
 install.packages("TVDIpk")
 ```
