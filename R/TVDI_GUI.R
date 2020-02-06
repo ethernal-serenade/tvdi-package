@@ -3,7 +3,8 @@
 #' Windowform TVDI
 #'
 #' Note: Windowform TVDI have function in this Packages
-#'
+#' @importFrom gWidgets gwindow ggroup gfilebrowse svalue gbutton
+#' @import gWidgetsRGtk2
 #' @export
 TVDI_GUI <- function() {
   options(guiToolkit = "RGtk2")

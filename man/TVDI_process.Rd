@@ -7,9 +7,11 @@
 TVDI_process(path_NDVI, path_LST, path)
 }
 \arguments{
-\item{list_NDVI}{List of NDVI images}
+\item{path_NDVI}{Path contains NDVI images}
 
-\item{list_LST}{List of LST images}
+\item{path_LST}{Path contains LST images}
+
+\item{path}{Path contains TVDI directory}
 }
 \value{
 Results TVDI

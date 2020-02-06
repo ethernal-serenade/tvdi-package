@@ -8,6 +8,8 @@ IQR_Raster(x, type_img)
 }
 \arguments{
 \item{x}{Image file to filter out exception value}
+
+\item{type_img}{Type of Image}
 }
 \value{
 Result image
