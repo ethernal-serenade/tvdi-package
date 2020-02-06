@@ -72,6 +72,8 @@ ok, you should be ready to install `TVDIpk`:
     + <http://ftp.gnome.org/pub/gnome/binaries/win32/gtk+/2.22/gtk+-bundle_2.22.1-20101227_win32.zip>
 if on Win32)
 
++ If none of the above works, download package at this <a href = "TVDIpk_0.3.tar.gz" download> link </a>
+
 ### How to use Pakages
 1. Golay UI
     + `Golay_GUI()`
