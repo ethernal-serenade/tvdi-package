@@ -75,10 +75,10 @@ if on Win32)
 ### How to use Pakages
 1. Golay UI
     + `Golay_GUI()`
-    + <img src="../img/Golay_GUI.jpg" width="50%">
+    + <img src="img/Golay_GUI.jpg" width="50%">
 2. TVDI UI
     + `TVDI_GUI()`
-    + <img src="../img/TVDI_GUI.jpg" width="50%">
+    + <img src="img/TVDI_GUI.jpg" width="50%">
 
 ### References
 + http://r-pkgs.had.co.nz/
