@@ -3,9 +3,15 @@
 #' Set the function of determining TVDI through LST and NDVI on all image points.
 #' Then export the result as Raster TVDI.
 #'
-#' @param list_NDVI List of NDVI images
-#' @param list_LST List of LST images
+#' @param path_NDVI Path contains NDVI images
+#' @param path_LST Path contains LST images
+#' @param path Path contains TVDI directory
 #' @return Results TVDI
+#' @importFrom rgdal readGDAL
+#' @importFrom raster raster coordinates crs writeRaster
+#' @importFrom sp proj4string "proj4string<-" "gridded<-" "coordinates<-"
+#' @importFrom stringr str_sub str_replace
+#' @importFrom stringi stri_length
 #' @export
 TVDI_process <- function (path_NDVI, path_LST, path) {
   setwd(path_NDVI)
@@ -95,9 +101,9 @@ TVDI_process <- function (path_NDVI, path_LST, path) {
     TVDI <- (y - Tmin)/(a + b*x - Tmin)
     latlong <- as.data.frame(coordinates(raster(list_LST[i])))
     raster_TVDI <- cbind(TVDI, latlong)
-    coordinates(raster_TVDI) <- ~x+y
-    proj4string(raster_TVDI) <- crs(proj4string(raster(list_LST[i])))
-    gridded(raster_TVDI) <- TRUE
+    sp::coordinates(raster_TVDI) <- ~x+y
+    sp::proj4string(raster_TVDI) <- crs(proj4string(raster(list_LST[i])))
+    sp::gridded(raster_TVDI) <- TRUE
     TVDI <- raster(raster_TVDI)
     writeRaster(TVDI, paste(path_result, "/", "TVDI",
                                    str_sub(str_replace(list_LST[i], "LST", ""), 1,

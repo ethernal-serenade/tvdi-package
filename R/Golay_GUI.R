@@ -3,7 +3,8 @@
 #' Windowform Savitzky Golay
 #'
 #' Note: Windowform Savitzky Golay have function in this Packages
-#'
+#' @importFrom gWidgets gwindow ggroup gfilebrowse svalue gbutton
+#' @import gWidgetsRGtk2
 #' @export
 Golay_GUI <- function() {
   options(guiToolkit = "RGtk2")

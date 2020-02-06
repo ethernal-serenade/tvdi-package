@@ -6,6 +6,15 @@
 #' @param path The path contains the images (conditions over 30 Images)
 #' @param path_result The path contains the result images
 #' @return Result image
+#' @importFrom rgdal readGDAL
+#' @importFrom raster raster crs coordinates writeRaster
+#' @importFrom sp proj4string "proj4string<-" "gridded<-" "coordinates<-"
+#' @importFrom tibble add_column
+#' @importFrom prospectr savitzkyGolay
+#' @importFrom stringr str_sub str_replace
+#' @importFrom stringi stri_length
+#' @importFrom Rcpp sourceCpp
+#' @import RcppArmadillo
 #' @export
 Golay_Raster <- function(path, path_result) {
   setwd(path)
@@ -41,9 +50,9 @@ Golay_Raster <- function(path, path_result) {
   for (i in 1:length(z_result)) {
     latlong <- as.data.frame(coordinates(raster(x.listfile[1])))
     data <- cbind(z_result[, i], latlong)
-    coordinates(data) <- ~x+y
-    proj4string(data) <- crs(proj4string(raster(x.listfile[1])))
-    gridded(data) <- TRUE
+    sp::coordinates(data) <- ~x+y
+    sp::proj4string(data) <- crs(proj4string(raster(x.listfile[1])))
+    sp::gridded(data) <- TRUE
     raster_data <- raster(data)
     writeRaster(raster_data, paste(path_result, "/", "Golay_",
                                    str_sub(x.listfile[i], 1, stri_length(x.listfile[i]) - 4), ".tif",

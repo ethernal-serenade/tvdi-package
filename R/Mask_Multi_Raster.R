@@ -6,6 +6,10 @@
 #' @param path_result The path contains the result images
 #' @param vector_shp vector data (ESRI Shapefiles)
 #' @return Result images
+#' @importFrom rgdal readGDAL readOGR
+#' @importFrom raster raster mask crop writeRaster
+#' @importFrom stringr str_sub str_replace
+#' @importFrom stringi stri_length
 #' @export
 Mask_Multi_Raster <- function(path, path_result, vector_shp){
   setwd(path)

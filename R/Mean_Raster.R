@@ -4,6 +4,9 @@
 #'
 #' @param path The path contains the Raster
 #' @return Result Images
+#' @importFrom rgdal readGDAL
+#' @importFrom raster raster coordinates crs
+#' @importFrom sp proj4string "proj4string<-" "gridded<-" "coordinates<-"
 #' @export
 Mean_Raster <- function(path){
   setwd(path)
@@ -19,8 +22,8 @@ Mean_Raster <- function(path){
   latlong <- as.data.frame(coordinates(raster(list[1])))
   Mean <- rowMeans(data, na.rm = TRUE)
   dataMean <- cbind(Mean, latlong)
-  coordinates(dataMean) <- ~x+y
-  proj4string(dataMean) <- crs(proj4string(raster(list[1])))
-  gridded(dataMean) <- TRUE
+  sp::coordinates(dataMean) <- ~x+y
+  sp::proj4string(dataMean) <- crs(proj4string(raster(list[1])))
+  sp::gridded(dataMean) <- TRUE
   rasterMean <- raster(dataMean)
 }
