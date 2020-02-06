@@ -18,7 +18,7 @@
 + Notes:
     + After coding on the libraries, need to insert the libraries into DESCRIPTION
     + Note: the problem in DESCRIPTION (packages using Imports, the packages available in the machine will be available, while currently using Depends can be used)
-    + An important issue is that when using GDAL-related packages, it is necessary to add the SystemRequirements section so that R can understand it.
+    + An important issue is that when using rGDAL and gWidgetsRGtk2, it is necessary to add the SystemRequirements section so that R can understand it.
 
 ### How to Download and Install
 + Download and Install from Github
