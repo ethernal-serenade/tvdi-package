@@ -21,6 +21,9 @@ Depends:
 SystemRequirements:
     GDAL (>= 2.0.1),
     PROJ.4 (>= 4.8.0),
+    Cairo (>= 1.0.0),
+    ATK (>= 1.10.0),
+    Pango (>= 1.10.0),
     GTK+ (>= 2.8.0),
-    Cairo (>= 1.0.0)
+    GLib (>= 2.8.0)
 RoxygenNote: 7.0.2
