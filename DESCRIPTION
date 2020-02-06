@@ -11,6 +11,7 @@ Depends:
     rgdal (>= 1.4-8),
     raster (>= 3.0-7),
     prospectr (>= 0.1.3),
+    pacman,
     Rcpp,
     RcppArmadillo,
     stringr (>= 1.4.0),
